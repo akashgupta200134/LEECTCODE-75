@@ -1,4 +1,5 @@
 #include <iostream>
+#include <unordered_set>
 #include <string>
 using namespace std;
 
@@ -12,6 +13,8 @@ int countVowels(string str, int n)
 
     int count = 0;
 
+    string ans = "";
+
     for (int i = 0; i < n; i++)
     {
 
@@ -19,11 +22,31 @@ int countVowels(string str, int n)
         {
 
             count++;
+            
+            cout << str[i] << " " ;
+    
         }
     }
 
     return count;
 }
+
+
+
+// count vowels using set
+
+// int countVowels(string str, int n) {
+//     unordered_set<char> vowels = {'a', 'e', 'i', 'o', 'u',
+//                                   'A', 'E', 'I', 'O', 'U'};
+//     int count = 0;
+//     for (int i = 0; i < n; i++) {
+//         if (vowels.count(str[i])) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
 
 int main()
 {
